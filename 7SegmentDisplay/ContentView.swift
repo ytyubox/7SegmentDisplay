@@ -12,25 +12,34 @@ import Binary7SegmentCore
 struct ContentView: View {
     @State var byte = Byte()
     var body: some View {
-        Decimal7View()
-//        VStack {
-//            Text("Hello, World!")
-//            Group {
-//                Toggle(isOn: $byte._A) {
-//                    Text("A")
-//                }
-//                Toggle(isOn: $byte._B) {
-//                    Text("A")
-//                }
-//                Toggle(isOn: $byte._C) {
-//                    Text("A")
-//                }
-//                Toggle(isOn: $byte._D) {
-//                    Text("A")
-//                }
-//                }.labelsHidden()
-//            .padding(.horizontal)
-//        }
+        VStack {
+            Text("Decimal 7 Segment")
+            HStack {
+                VStack {
+                    Text("A")
+                    Toggle(isOn: $byte._A) {
+                        Text("A")
+                    }
+                }
+                
+                VStack {
+                    Text("B")
+                    Toggle("",isOn: $byte._B)
+                }
+                VStack {
+                    Text("C")
+                    Toggle("",isOn: $byte._C)
+                }
+                VStack {
+                    Text("D")
+                    Toggle("",isOn: $byte._D)
+                }
+                Text(byte.value.description)
+            }.labelsHidden()
+                .padding(.horizontal)
+            Decimal7View(cirCuits: byte.makeDecimal())
+                .padding()
+        }
     }
 }
 

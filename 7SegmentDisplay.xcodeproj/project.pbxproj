@@ -42,6 +42,8 @@
 		A787CCD724D279C80030B1A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A787CCE024D27A0E0030B1A8 /* Binary7SegmentCore */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Binary7SegmentCore; sourceTree = "<group>"; };
 		A787CCE424D2A3160030B1A8 /* Decimal7View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decimal7View.swift; sourceTree = "<group>"; };
+		A787CCE624D2B6060030B1A8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A787CCE724D2B6BB0030B1A8 /* demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = demo.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,8 @@
 		A787CCB224D279C50030B1A8 = {
 			isa = PBXGroup;
 			children = (
+				A787CCE624D2B6060030B1A8 /* README.md */,
+				A787CCE724D2B6BB0030B1A8 /* demo.gif */,
 				A787CCE024D27A0E0030B1A8 /* Binary7SegmentCore */,
 				A787CCBD24D279C50030B1A8 /* 7SegmentDisplay */,
 				A787CCD424D279C80030B1A8 /* 7SegmentDisplayUITests */,

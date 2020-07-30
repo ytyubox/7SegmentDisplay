@@ -38,6 +38,7 @@
 		A787CCD124D279C80030B1A8 /* 7SegmentDisplayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 7SegmentDisplayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A787CCD524D279C80030B1A8 /* _SegmentDisplayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _SegmentDisplayUITests.swift; sourceTree = "<group>"; };
 		A787CCD724D279C80030B1A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A787CCE024D27A0E0030B1A8 /* Binary7SegmentCore */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Binary7SegmentCore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +62,7 @@
 		A787CCB224D279C50030B1A8 = {
 			isa = PBXGroup;
 			children = (
+				A787CCE024D27A0E0030B1A8 /* Binary7SegmentCore */,
 				A787CCBD24D279C50030B1A8 /* 7SegmentDisplay */,
 				A787CCD424D279C80030B1A8 /* 7SegmentDisplayUITests */,
 				A787CCBC24D279C50030B1A8 /* Products */,

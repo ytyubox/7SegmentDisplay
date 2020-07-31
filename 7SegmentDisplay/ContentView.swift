@@ -12,6 +12,7 @@ import Binary7SegmentCore
 struct ContentView: View {
     @State var byte = Byte()
     @State var value = 0
+    private let animationFlag: Animation = .easeInOut
     var body: some View {
         VStack {
             Text("Decimal 7 Segment")
@@ -19,26 +20,26 @@ struct ContentView: View {
             HStack {
                 VStack {
                     Text("A")
-                    Toggle(isOn: $byte._A) {
+                    Toggle(isOn: $byte._A.animation(animationFlag)) {
                         Text("A")
                     }
                 }
                 
                 VStack {
                     Text("B")
-                    Toggle("",isOn: $byte._B)
+                    Toggle("",isOn: $byte._B.animation(animationFlag))
                 }
                 VStack {
                     Text("C")
-                    Toggle("",isOn: $byte._C)
+                    Toggle("",isOn: $byte._C.animation(animationFlag))
                 }
                 VStack {
                     Text("D")
-                    Toggle("",isOn: $byte._D)
+                    Toggle("",isOn: $byte._D.animation(animationFlag))
                 }
                 VStack {
                     Text(byte.value.description)
-                    Stepper("", value: self.$byte.value, in: 0...9, step: 1)
+                    Stepper("", value: self.$byte.value.animation(animationFlag), in: 0...9, step: 1)
                         .labelsHidden()
                 }
             }.labelsHidden()

@@ -15,8 +15,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("Decimal 7 Segment")
-            Stepper("", value: self.$byte.value, in: 0...9, step: 1)
-                .labelsHidden()
+            
             HStack {
                 VStack {
                     Text("A")
@@ -37,11 +36,15 @@ struct ContentView: View {
                     Text("D")
                     Toggle("",isOn: $byte._D)
                 }
-                Text(byte.value.description)
+                VStack {
+                    Text(byte.value.description)
+                    Stepper("", value: self.$byte.value, in: 0...9, step: 1)
+                        .labelsHidden()
+                }
             }.labelsHidden()
                 .padding(.horizontal)
             Decimal7View(cirCuits: byte.makeDecimal())
-                .padding()
+                .padding(40)
         }
     }
 }

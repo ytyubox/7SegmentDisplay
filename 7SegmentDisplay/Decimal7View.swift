@@ -48,7 +48,7 @@ struct Decimal7View:View {
 }
 
 extension Color {
-    static var grayMy:Color {Color(white: 0.1, opacity: 1)}
+static var grayMy:Color {  Color("SegmentBG")}
 }
 
 struct SegmentTextH:View {

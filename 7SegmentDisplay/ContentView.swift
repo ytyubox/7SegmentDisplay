@@ -42,8 +42,8 @@ struct ContentView: View {
                     Stepper("", value: self.$byte.value.animation(animationFlag), in: 0...9, step: 1)
                         .labelsHidden()
                 }
-            }.labelsHidden()
                 .padding(.horizontal)
+            }
             Decimal7View(cirCuits: byte.makeDecimal())
                 .padding(40)
         }

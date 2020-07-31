@@ -47,6 +47,9 @@ struct Decimal7View:View {
     }
 }
 
+extension Color {
+    static var grayMy:Color {Color(white: 0.1, opacity: 1)}
+}
 
 struct SegmentTextH:View {
     init(_ text: String, isActive: Bool) {
@@ -61,10 +64,9 @@ struct SegmentTextH:View {
             (proxy:GeometryProxy) in
             Text(self.text)
                 .frame(width: proxy.size.width, height: proxy.size.height, alignment: .center)
-                .background(self.isActive ? Color.red : Color.gray)
+                .background(self.isActive ? Color.red : Color.grayMy)
                 .foregroundColor(Color.white)
-                .font(.title)
-                .cornerRadius(.infinity)
+                .cornerRadius(proxy.size.width / 2)
         }
     }
 }
@@ -81,10 +83,9 @@ struct SegmentTextV:View {
             (proxy:GeometryProxy) in
             Text(self.text)
                 .frame(width: proxy.size.width , height: proxy.size.height, alignment: .center)
-                .background(self.isActive ? Color.red : Color.gray)
+                .background(self.isActive ? Color.red : Color.grayMy)
                 .foregroundColor(Color.white)
-                .font(.title)
-                .cornerRadius(.infinity)
+                .cornerRadius(proxy.size.height / 2 )
         }
     }
 }

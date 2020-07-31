@@ -11,9 +11,12 @@ import Binary7SegmentCore
 
 struct ContentView: View {
     @State var byte = Byte()
+    @State var value = 0
     var body: some View {
         VStack {
             Text("Decimal 7 Segment")
+            Stepper("", value: self.$byte.value, in: 0...9, step: 1)
+                .labelsHidden()
             HStack {
                 VStack {
                     Text("A")

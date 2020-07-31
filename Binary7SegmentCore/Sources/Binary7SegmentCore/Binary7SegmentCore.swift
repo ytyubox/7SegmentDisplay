@@ -9,14 +9,32 @@ public struct Byte {
     }
     
     public var _D,_C,_B,_A:Bool
-    public var list:[Bool] {[_D,_C,_B,_A]}
+    public var list:[Bool] {
+        [
+            _A,
+            _B,
+            _C,
+            _D,
+        ]
+        
+    }
     public var value:Int {
-        var i = 0
-        i += _D ? 1 : 0
-        i += _C ? 2 : 0
-        i += _B ? 4 : 0
-        i += _A ? 8 : 0
-        return i
+        get {
+            var i = 0
+            i += _D ? 1 : 0
+            i += _C ? 2 : 0
+            i += _B ? 4 : 0
+            i += _A ? 8 : 0
+            return i
+        }
+        set {
+            assert(newValue < 10)
+            _D = 1 & newValue == 1
+            _C = 2 & newValue == 2
+            _B = 4 & newValue == 4
+            _A = 8 & newValue == 8
+            
+        }
     }
     mutating public func changeTo(_ boolList:[Bool]) {
         assert(boolList.count == 4)

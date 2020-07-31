@@ -10,7 +10,7 @@ import SwiftUI
 import Binary7SegmentCore
 struct Decimal7View:View {
     var cirCuits: ByteCirCuits
-    let i:CGFloat = 20
+    let i1:CGFloat = 10
     let i2:CGFloat =  1.2
     var body: some View {
         GeometryReader {
@@ -18,25 +18,29 @@ struct Decimal7View:View {
             VStack {
                 SegmentTextV("a", isActive: self.cirCuits.orList[0])
                     .frame(width: proxy.size.width / self.i2,
-                           height: proxy.size.height / self.i)
+                           height: proxy.size.height / self.i1)
                 HStack() {
                     SegmentTextH("f", isActive: self.cirCuits.orList[5])
+                        .frame(width: proxy.size.height / self.i1)
                     Spacer(minLength: proxy.size.width * 3 / 4)
                     SegmentTextH("b", isActive: self.cirCuits.orList[1])
+                        .frame(width: proxy.size.height / self.i1)
                 }
                 SegmentTextV("g", isActive: self.cirCuits.orList[6])
                     .frame(width: proxy.size.width / self.i2,
-                           height: proxy.size.height / self.i)
+                           height: proxy.size.height / self.i1)
                 
                 HStack {
                     SegmentTextH("e", isActive: self.cirCuits.orList[4])
+                        .frame(width: proxy.size.height / self.i1)
                     Spacer(minLength: proxy.size.width * 3 / 4)
                     SegmentTextH("c", isActive: self.cirCuits.orList[2])
+                        .frame(width: proxy.size.height / self.i1)
                 }
                 Divider()
                 SegmentTextV("d", isActive: self.cirCuits.orList[3])
                     .frame(width: proxy.size.width / self.i2,
-                           height: proxy.size.height / self.i)
+                           height: proxy.size.height / self.i1)
             }
         }
         .padding()

@@ -25,6 +25,12 @@ final class Binary7SegmentCoreTests: XCTestCase {
         for (list, expect) in testList {
         testValue(list, expect)
         }
+        
+        for (expect, value) in testList {
+            var byte = Byte()
+            byte.value = value
+            XCTAssertEqual(expect.boolList(count: 4), byte.list, "value:\(value) expect \(expect.boolList(count: 4)) but found \(byte.list)")
+        }
     }
     func testOrList() {
         let testList = [
